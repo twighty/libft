@@ -6,7 +6,7 @@
 #    By: twight <twight@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/04 15:43:02 by twight            #+#    #+#              #
-#    Updated: 2019/06/13 13:10:17 by twight           ###   ########.fr        #
+#    Updated: 2019/07/01 17:04:10 by twight           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,10 @@ PART2 = ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BONUS = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
-		ft_lstmap.c ft_itoa_base.c ft_strndup.c get_next_line.c
+		ft_lstmap.c ft_itoa_base.c ft_strndup.c get_next_line.c ft_atof.c \
+		ft_isblank.c
+
+GNL =	get_next_line.c
 
 OBJ_1 = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 		ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o \
@@ -44,16 +47,19 @@ OBJ_2 = ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o \
 		ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
 
 OBJ_B = ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o \
-		ft_lstmap.o ft_itoa_base.o ft_strndup.o get_next_line.o
+		ft_lstmap.o ft_itoa_base.o ft_strndup.o get_next_line.o ft_atof.o \
+		ft_isblank.o
+
+GNL_O = get_next_line.o
 
 all: $(NAME)
 
 $(NAME):
-		gcc $(FLAGS) -I ./ -c $(PART1) $(PART2) $(BONUS)
-		ar rc $(NAME) $(OBJ_1) $(OBJ_2) $(OBJ_B)
+		gcc $(FLAGS) -I ./ -c $(PART1) $(PART2) $(BONUS) $(GNL)
+		ar rc $(NAME) $(OBJ_1) $(OBJ_2) $(OBJ_B) $(GNL_O)
 
 clean:
-		/bin/rm -f $(OBJ_1) $(OBJ_2) $(OBJ_B)
+		/bin/rm -f $(OBJ_1) $(OBJ_2) $(OBJ_B) $(GNL_O)
 
 fclean: clean
 		/bin/rm -f $(NAME)

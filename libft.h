@@ -6,7 +6,7 @@
 /*   By: twight <twight@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 13:01:13 by twight            #+#    #+#             */
-/*   Updated: 2019/06/05 18:50:52 by twight           ###   ########.fr       */
+/*   Updated: 2019/07/01 17:02:02 by twight           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct	s_list
 }				t_list;
 
 int				ft_atoi(const char *str);
+double			ft_atof(const char *str);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 char			*ft_strncpy(char *s1, const char *s2, size_t len);
@@ -34,6 +35,7 @@ unsigned long	ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strnstr(const char *haystack, const char *needle, \
 				size_t len);
 int				ft_isalpha(int c);
+int				ft_isblank(char c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isprint(int c);
