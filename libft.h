@@ -6,7 +6,7 @@
 /*   By: twight <twight@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 13:01:13 by twight            #+#    #+#             */
-/*   Updated: 2019/07/11 18:39:05 by twight           ###   ########.fr       */
+/*   Updated: 2019/07/11 18:55:25 by twight           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+# define FT_UINT_MAX	((unsigned)(~0L))
+# define FT_INT_MAX		((int)(FT_UINT_MAX >> 1))
+# define FT_INT_MIN		((int)(~FT_INT_MAX))
 
 typedef struct	s_list
 {
@@ -38,6 +42,7 @@ int				ft_isalpha(int c);
 int				ft_isblank(char c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
+int				ft_isint(const char *str, int strict);
 int				ft_isnum(char *str, int base);
 int				ft_isspace(int c);
 int				ft_isprefix(const char *str, int base);
