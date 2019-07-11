@@ -6,7 +6,7 @@
 #    By: twight <twight@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/04 15:43:02 by twight            #+#    #+#              #
-#    Updated: 2019/07/01 17:04:10 by twight           ###   ########.fr        #
+#    Updated: 2019/07/11 18:39:57 by twight           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ PART2 = ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c \
 
 BONUS = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
 		ft_lstmap.c ft_itoa_base.c ft_strndup.c get_next_line.c ft_atof.c \
-		ft_isblank.c
+		ft_isblank.c ft_isnum.c ft_isspace.c ft_isprefix.c ft_isdigit_base.c
 
 GNL =	get_next_line.c
 
@@ -48,7 +48,7 @@ OBJ_2 = ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o \
 
 OBJ_B = ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o \
 		ft_lstmap.o ft_itoa_base.o ft_strndup.o get_next_line.o ft_atof.o \
-		ft_isblank.o
+		ft_isblank.o ft_isnum.o ft_isspace.o ft_isprefix.o ft_isdigit_base.o
 
 GNL_O = get_next_line.o
 

@@ -6,7 +6,7 @@
 /*   By: twight <twight@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 13:01:13 by twight            #+#    #+#             */
-/*   Updated: 2019/07/01 17:02:02 by twight           ###   ########.fr       */
+/*   Updated: 2019/07/11 18:39:05 by twight           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ int				ft_isalpha(int c);
 int				ft_isblank(char c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
+int				ft_isnum(char *str, int base);
+int				ft_isspace(int c);
+int				ft_isprefix(const char *str, int base);
+int				ft_isdigit_base(char c, int base);
 int				ft_isprint(int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
