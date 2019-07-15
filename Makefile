@@ -6,7 +6,7 @@
 #    By: twight <twight@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/04 15:43:02 by twight            #+#    #+#              #
-#    Updated: 2019/07/11 19:00:20 by twight           ###   ########.fr        #
+#    Updated: 2019/07/15 21:31:12 by twight           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ GNL_O = get_next_line.o
 all: $(NAME)
 
 $(NAME):
-		gcc $(FLAGS) -I ./ -c $(PART1) $(PART2) $(BONUS) $(GNL)
+		gcc $(FLAGS) -I./ -c $(PART1) $(PART2) $(BONUS) $(GNL)
 		ar rc $(NAME) $(OBJ_1) $(OBJ_2) $(OBJ_B) $(GNL_O)
 
 clean:
