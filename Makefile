@@ -6,7 +6,7 @@
 #    By: twight <twight@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/04 15:43:02 by twight            #+#    #+#              #
-#    Updated: 2019/07/15 21:31:12 by twight           ###   ########.fr        #
+#    Updated: 2019/07/15 23:53:46 by twight           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,16 +54,26 @@ OBJ_B = ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o \
 
 GNL_O = get_next_line.o
 
+GREEN = \033[0;32m
+RED = \033[0;31m
+RESET = \033[0m
+
 all: $(NAME)
 
 $(NAME):
-		gcc $(FLAGS) -I./ -c $(PART1) $(PART2) $(BONUS) $(GNL)
-		ar rc $(NAME) $(OBJ_1) $(OBJ_2) $(OBJ_B) $(GNL_O)
+		@gcc $(FLAGS) -I./ -c $(PART1) $(PART2) $(BONUS) $(GNL)
+		@echo "$(NAME): $(GREEN)compiling *.o files$(RESET)"
+		@ar rc $(NAME) $(OBJ_1) $(OBJ_2) $(OBJ_B) $(GNL_O)
+		@echo "$(NAME): $(GREEN)compiling $(NAME) has been completed$(RESET)"
 
 clean:
-		/bin/rm -f $(OBJ_1) $(OBJ_2) $(OBJ_B) $(GNL_O)
+		@rm -f $(OBJ_1) $(OBJ_2) $(OBJ_B) $(GNL_O)
+		@echo "$(NAME): $(RED)*.o files have been deleted$(RESET)"
 
 fclean: clean
-		/bin/rm -f $(NAME)
+		@rm -f $(NAME)
+		@echo "$(NAME): $(RED)$(NAME) has been deleted$(RESET)"
 
 re: fclean all
+
+.PHONY: all clean fclean re
