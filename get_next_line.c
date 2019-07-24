@@ -6,7 +6,7 @@
 /*   By: twight <twight@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 15:22:18 by twight            #+#    #+#             */
-/*   Updated: 2019/07/20 00:55:54 by twight           ###   ########.fr       */
+/*   Updated: 2019/07/24 16:47:16 by twight           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,6 @@ int				get_next_line(const int fd, char **line)
 	if (ret < 0)
 		return (-1);
 	else if (ret == 0 && (s[fd] == NULL || s[fd][0] == '\0'))
-	{
-		free(*line);
 		return (0);
-	}
 	return (ft_new_line(s, line, fd, ret));
 }
