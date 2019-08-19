@@ -6,7 +6,7 @@
 /*   By: twight <twight@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 13:01:13 by twight            #+#    #+#             */
-/*   Updated: 2019/07/15 21:31:55 by twight           ###   ########.fr       */
+/*   Updated: 2019/08/19 19:11:32 by twight           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,8 @@ void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int				get_next_line(const int fd, char **line);
+void			ft_arrclr(char **arr);
+int				ft_arrlen(char **arr);
+int				ft_char_count(char c, char *line);
 
 #endif
